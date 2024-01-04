@@ -5,11 +5,12 @@ import { FeedHeader } from "./FeedHeader"
 import Footer from "./Footer"
 import styled from "@emotion/styled"
 import TagList from "./TagList"
-import MobileProfileCard from "./MobileProfileCard"
+// import MobileProfileCard from "./MobileProfileCard"
 import ProfileCard from "./ProfileCard"
 import ServiceCard from "./ServiceCard"
 import ContactCard from "./ContactCard"
 import PostList from "./PostList"
+import PopularHash from "./PopularHash"
 
 const HEADER_HEIGHT = 73
 
@@ -27,9 +28,10 @@ const Feed: React.FC<Props> = () => {
         }}
       >
         <TagList />
+        <PopularHash />
       </div>
       <div className="mid">
-        <MobileProfileCard />
+        {/* <MobileProfileCard /> */}
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tags">
           <TagList />
@@ -75,7 +77,7 @@ const StyledWrapper = styled.div`
     display: none;
     overflow: scroll;
     position: sticky;
-    grid-column: span 2 / span 2;
+    grid-column: span 3 / span 3;
     top: ${HEADER_HEIGHT - 10}px;
 
     scrollbar-width: none;
@@ -93,7 +95,7 @@ const StyledWrapper = styled.div`
     grid-column: span 12 / span 12;
 
     @media (min-width: 1024px) {
-      grid-column: span 7 / span 7;
+      grid-column: span 6 / span 6;
     }
 
     > .tags {

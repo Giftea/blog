@@ -12,7 +12,11 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <StyledWrapper>
       <div data-full-width={fullWidth} className="container">
-        <Logo />
+        <img
+          src="/android-chrome-384x384.png"
+          alt=""
+          style={{ width: "100px" }}
+        />
         <div className="nav">
           <ThemeToggle />
           <NavBar />
@@ -39,7 +43,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     width: 100%;
     max-width: 1120px;
-    height: 3rem;
+    height: 4rem;
     margin: 0 auto;
     &[data-full-width="true"] {
       @media (min-width: 768px) {

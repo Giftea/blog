@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, useEffect } from "react"
 import { ThemeProvider } from "./ThemeProvider"
 import useScheme from "src/hooks/useScheme"
 import Header from "./Header"
@@ -12,6 +12,7 @@ type Props = {
 
 const RootLayout = ({ children }: Props) => {
   const [scheme] = useScheme()
+
   useGtagEffect()
   return (
     <ThemeProvider scheme={scheme}>
@@ -30,5 +31,5 @@ const StyledMain = styled.main`
   margin: 0 auto;
   width: 100%;
   max-width: 1120px;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 `

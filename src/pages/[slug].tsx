@@ -11,36 +11,66 @@ import { queryKey } from "src/constants/queryKey"
 import { dehydrate } from "@tanstack/react-query"
 import usePostQuery from "src/hooks/usePostQuery"
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts"
+import path from "path"
+import fs from "fs"
+import matter from "gray-matter"
 
 const filter: FilterPostsOptions = {
   acceptStatus: ["Public", "PublicOnDetail"],
   acceptType: ["Paper", "Post", "Page"],
 }
 
-export const getStaticPaths = async () => {
-  const posts = await getPosts()
-  const filteredPost = filterPosts(posts, filter)
+// export const getStaticPaths = async () => {
+//   const posts = await getPosts()
+//   const filteredPost = filterPosts(posts, filter)
+
+//   return {
+//     paths: filteredPost.map((row) => `/${row.slug}`),
+//     fallback: true,
+//   }
+// }
+export async function getStaticPaths() {
+  const files = fs.readdirSync(path.join("posts"))
+
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename.replace(".md", ""),
+    },
+  }))
 
   return {
-    paths: filteredPost.map((row) => `/${row.slug}`),
-    fallback: true,
+    paths,
+    fallback: false,
   }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug
 
-  const posts = await getPosts()
-  const feedPosts = filterPosts(posts)
-  await queryClient.prefetchQuery(queryKey.posts(), () => feedPosts)
+  // Replace this with the logic from the second getStaticProps
+  const postsDirectory = path.join(process.cwd(), "posts")
+  const postFiles = fs.readdirSync(postsDirectory)
 
-  const detailPosts = filterPosts(posts, filter)
-  const postDetail = detailPosts.find((t: any) => t.slug === slug)
+  const allPostsData = postFiles.map((fileName) => {
+    const filePath = path.join(postsDirectory, fileName)
+    const fileContents = fs.readFileSync(filePath, "utf8")
+    const { data } = matter(fileContents)
+    data.slug = fileName.replace(/\.md$/, "")
+    return data
+  })
+
+  // Find the specific post by slug
+  const postDetail = allPostsData.find((post) => post.slug === slug)
   const recordMap = await getRecordMap(postDetail?.id!)
-
+  // console.log(recordMap)
+  const markedownWithMeta = fs.readFileSync(
+    path.join("posts", slug + ".md"),
+    "utf8"
+  )
+  const { data: frontmatter, content } = matter(markedownWithMeta)
   await queryClient.prefetchQuery(queryKey.post(`${slug}`), () => ({
     ...postDetail,
-    recordMap,
+    recordMap: content,
   }))
 
   return {

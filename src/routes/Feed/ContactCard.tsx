@@ -5,8 +5,11 @@ import {
   AiOutlineGithub,
   AiOutlineMail,
   AiFillLinkedin,
+  AiOutlineTwitter,
 } from "react-icons/ai"
 import styled from "@emotion/styled"
+import { faDiscord } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const ContactCard: React.FC = () => {
   return (
@@ -23,14 +26,14 @@ const ContactCard: React.FC = () => {
             <div className="name">github</div>
           </a>
         )}
-        {CONFIG.profile.instagram && (
+        {CONFIG.profile.twitter && (
           <a
-            href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
+            href={`https://www.instagram.com/${CONFIG.profile.twitter}`}
             rel="noreferrer"
             target="_blank"
           >
-            <AiOutlineInstagram className="icon" />
-            <div className="name">instagram</div>
+            <AiOutlineTwitter className="icon" />
+            <div className="name">twitter</div>
           </a>
         )}
         {CONFIG.profile.email && (
@@ -44,14 +47,15 @@ const ContactCard: React.FC = () => {
             <div className="name">email</div>
           </a>
         )}
-        {CONFIG.profile.linkedin && (
+        {CONFIG.profile.discord && (
           <a
-            href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
+            href={`https://www.linkedin.com/in/${CONFIG.profile.discord}`}
             rel="noreferrer"
             target="_blank"
           >
-            <AiFillLinkedin className="icon" />
-            <div className="name">linkedin</div>
+            <FontAwesomeIcon icon={faDiscord} />
+
+            <div className="name">Discord</div>
           </a>
         )}
       </StyledWrapper>

@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query"
-import { getCookie, setCookie } from "cookies-next"
+import { setCookie } from "cookies-next"
 import { useEffect } from "react"
 import { queryKey } from "src/constants/queryKey"
 
@@ -12,22 +12,18 @@ const useScheme = (): [Scheme, SetScheme] => {
   const { data } = useQuery({
     queryKey: queryKey.scheme(),
     enabled: false,
-    initialData: "light",
+    initialData: "light", // Set initial data to light
   })
 
-  const scheme = data === "light" ? "light" : "dark"
+  const scheme = "light" // Always use light theme
 
   const setScheme = (scheme: "light" | "dark") => {
-    setCookie("scheme", scheme)
-
-    queryClient.setQueryData(queryKey.scheme(), scheme)
+    setCookie("scheme", "light") // Always set cookie to light
+    queryClient.setQueryData(queryKey.scheme(), "light") // Always set query data to light
   }
 
   useEffect(() => {
-    if (!window) return
-
-    const scheme = getCookie("scheme")
-    setScheme(scheme === "light" ? "light" : "dark")
+    setScheme("light") // On component mount, enforce light theme
   }, [])
 
   return [scheme, setScheme]

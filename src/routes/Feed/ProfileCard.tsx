@@ -3,23 +3,31 @@ import Image from "next/image"
 import React from "react"
 import styled from "@emotion/styled"
 import { Emoji } from "src/components/Emoji"
+import Link from "next/link"
 
 type Props = {}
 
 const ProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="title">
+      {/* <div className="title">
         <Emoji>💻</Emoji> Profile
-      </div>
+      </div> */}
       <div className="content">
         <div className="top">
-          <Image src={CONFIG.profile.image} fill alt="" />
+          <Image src="/android-chrome-384x384.png" fill alt="" />
         </div>
         <div className="mid">
-          <div className=" name">{CONFIG.profile.name}</div>
+          <h4>Devwrites is a community of talented African developers passionate about technical writing.</h4>
+          <p>
+            {" "}
+            We&apos;re a place where African coders, ui/ux designers share, stay up-to-date and grow
+            their careers.
+          </p>
+          <Link href={"/join"}>Join Community</Link>
+          {/* <div className=" name">{CONFIG.profile.name}</div>
           <div className="role">{CONFIG.profile.role}</div>
-          <div className="text-sm mb-2">{CONFIG.profile.bio}</div>
+          <div className="text-sm mb-2">{CONFIG.profile.bio}</div> */}
         </div>
       </div>
     </StyledWrapper>
@@ -29,6 +37,35 @@ const ProfileCard: React.FC<Props> = () => {
 export default ProfileCard
 
 const StyledWrapper = styled.div`
+  a {
+    border: 1px solid #133962; /* Blue border color */
+    background-color: #133962; /* Blue background */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for better spacing */
+    text-align: center;
+    width:100%;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+
+    &:hover {
+      background-color: #0056b3; /* Slightly darker blue on hover */
+      border-color: #0056b3;
+      box-shadow: 0 2px 4px rgba(0, 123, 255, 0.5); /* Shadow for depth */
+    }
+
+    &:active {
+      background-color: #004085; /* Even darker for active state */
+      border-color: #004085;
+    }
+
+    &:focus {
+      outline: none; /* Remove default focus outline */
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Custom focus shadow */
+    }
+  }
   > .title {
     padding: 0.25rem;
     margin-bottom: 0.75rem;

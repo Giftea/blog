@@ -14,4 +14,5 @@ const usePostQuery = () => {
   return data
 }
 
+
 export default usePostQuery

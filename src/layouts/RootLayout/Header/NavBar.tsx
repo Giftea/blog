@@ -6,11 +6,11 @@ const NavBar: React.FC = () => {
   return (
     <StyledWrapper className="">
       <ul>
-        {links.map((link) => (
+        {/* {links.map((link) => (
           <li key={link.id}>
             <Link href={link.to}>{link.name}</Link>
           </li>
-        ))}
+        ))} */}
       </ul>
     </StyledWrapper>
   )
