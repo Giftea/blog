@@ -1,126 +1,113 @@
-# morethan-log
+# Devwrite Africa Article Guidelines
 
-<img width="1715" alt="image" src="https://user-images.githubusercontent.com/72514247/209824600-ca9c8acc-6d2d-4041-9931-43e34b8a9a5f.png">
+Thank you for your interest in contributing to the [Devwrite Africa Community Blog](https://devrite.com)! We welcome everyone in the Devwrite Africa community to share their experiences, insights, and expertise with fellow developers worldwide. This is also an opportunity to get mentored by senior technical writers and gain the hand-on experience you need to land your dream technical writing job.
 
-Next.js static blog using Notion as a Content Management System (CMS). Supports both Blog format Post as well as Page format for Resume. Deployed using Vercel.
+## General Guidelines
+To ensure we publish only quality and relevant article and tutorials, we only accept and publish four articles per month and We require contributors to follow these steps: 
+1. [Join the Devwrites commmunity](https://devwriteafrica.com/join).
+2. Submit a draft PR (minimum of 1,500 words article/tutorial).
+3. Get reviews from the community leads.
+4. Publish on our blog and social media channels. 
+5. Repost on your social media accounts.
 
-[Demo Blog](https://morethan-log.vercel.app) | [Demo Resume](https://morethan-log.vercel.app/resume)
+### Join the Devwrites commmunity
 
-## Features
+Join the Devwrites community to learn how to write high-quality, engaging technical articles and tutorials. Becoming a member gives you the chance to have your articles featured on the Devwrites community blog and gain valuable experience through mentorship from seasoned technical writers. Just fill out the membership form to get started.
 
-**📒 Writing posts using notion**
+Also, it's important for all writers to join our Discord channel. In our draft-review channel, you can submit your drafts, receive feedback, and ask any questions related to your articles.
 
-- No need of commiting to Github for posting anything to your website.
-- Posts made on Notion are automaticaly updated on your site.
+### Submit a draft PR
+To submit a draft PR, follow the following steps:
 
-**📄 Use as a page as resume**
+1. Choose a topic is engaging ideas from open-source products, questions or topics on different places like [GitHub](https://github.com/), [Reddit](https://www.reddit.com/), [Discord](https://discord.com/).
+2. Research extensively on the topic.
+3. Fork the Devwrites blog repository and clone the Devwrites blog repo.
+```
+git clone https://github.com/devwriteafrica/blog
+```
+4. Create a new blog in **posts** directory.
+5. Write the contents of the blog in markdown format([see samples here](https://github.com/devwriteafrica/blog/tree/main/posts)).
+6. Proof read and create a create a PR.
 
-- Useful for generating full page sites using Notion.
-- Can be used for Resume, Portfolios etc.
+Before writing an article or tutorial, ensure it has not been already published on the Devwrite community blog. PRs that dose not meet this requirements will be rejected.
 
-**👀 SEO friendly**
+### PR Guidelines
+Here is a guideline to follow for creating a PR for your blog:
 
-- Dynamically generates OG IMAGEs (thumbnails!) for posts. ([og-image-korean](https://github.com/morethanmin/og-image-korean)).
-- Dynamically creates sitemap for posts.
+1. Create a markdown file in the **posts** directory.
+2. Slugify the blog title and use it as the blog filename, e.g., `build-a-blog-with-astroJS-using-mdx-ntegration.md`.
+3. The cover image name should match the slug, e.g., `build-a-blog-with-astroJS-using-mdx-ntegration.jpg`.
+4. Add the blog metadata and the name you want displayed on the blog in the front matter:
+```
+---
+date: { start_date: '2023-01-22' }
+type: [ 'Post' ]
+category: [ '📗 Dev' ]
+createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+fullWidth: false
+slug: 'build-a-blog-with-astroJS-using-mdx-ntegration'
+tags: [ 'MDX' ]
+author: [ "Your Name" ]
+title: 'Build a blog with AstroJS using MDX Integration'
+status: [ 'Public' ]
+---
+```
+Leave the date, type, category, status, and createdTime fields for the review team and fill in the rest.
 
-**🤖 Customisable and Supports various plugin through CONFIG**
+### Article Creation Guide
+To create articles that are both engaging and SEO-optimized, adhere to the following structure:
 
-- Your profile information can be updated through Config. (`site.config.js`)
-- Plugins support includes, Google Analytics, Search Console and also Commenting using Github Issues(Utterances) or Cusdis.
+#### **Title:**
 
-## Getting Started
+- Create a succinct, keyword-rich title that mirrors the content.
+- Capitalize only the first letter of the first word and proper nouns, using sentence case for the rest.
+- Assess your title's effectiveness here.
 
-1. Star this repo.
-2. [Fork](https://github.com/morethanmin/morethan-log/fork) the repo to your Profile.
-3. Duplicate [this Notion template](https://quasar-season-ed5.notion.site/12c38b5f459d4eb9a759f92fba6cea36?v=2e7962408e3842b2a1a801bf3546edda), and Share to Web.
-4. Copy the Web Link and keep note of the Notion Page Id from the Link which will be in this format [username.notion.site/`NOTION_PAGE_ID`?v=`VERSION_ID`]. 
-5. Clone your forked repo and then customize `site.config.js` based on your preference.
-6. Deploy on Vercel, with the following environment variables.
+#### **Opening Section:**
 
-   - `NOTION_PAGE_ID` (Required): The Notion page Id got from the Share to Web URL. This is not the entire URL, but just the NOTION_PAGE_ID part as shown above.
-   - `NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID` : For Google analytics Plugin.
-   - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` : For Google search console Plugin.
-   - `NEXT_PUBLIC_NAVER_SITE_VERIFICATION` : For Naver search advisor Plugin.
+Start with an enticing introduction, providing a sneak peek into what the article entails.
 
-## 10 Steps to build your own morethan-log (by 23.06.23)
+**Before You Start:**
 
-<details>
-   <summary> Click to see guide </summary>
-   
-   0. Prepare Notion, Vercel account.
+List necessary prerequisites for tutorials, guiding readers on what they need beforehand.
 
-   1. ⭐ `Star` and `Fork` this repo.
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/b0421776-2bfe-42bc-ae31-d90206fd5789' width = '500'>
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/185a8e4c-4ae2-4a38-b6f4-dc2a06a45c28' width = '500'>
+#### **Core Content:**
 
-   2. As you `click` the [Notion template](https://quasar-season-ed5.notion.site/12c38b5f459d4eb9a759f92fba6cea36?v=2e7962408e3842b2a1a801bf3546edda), you will see this notion page in your browser. Click `Duplicate` button(복제 in image) in right top.
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/a5375429-28f0-4bba-a355-0d391cad58db' width = '500'>
+Organize with subheadings and lists for readability. Key aspects include:
+- Embedding keywords for SEO.
+- Adhering to the Oxford Style Guide, especially for regular contributors.
+- Restricting to one h1 tag, used for the title.
+- Including GitHub source code links.
+- Styling terms consistently, e.g. **open-source**.
 
-   3. And you will see `notion page in notion app` in your account.
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/09af5533-43d9-48e5-95eb-dcac84c97c1f' width = '500'>
+#### **Visuals:**
 
-   4. Click `Share` and `Publish` in right top, and check web link. (Copy web link)
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/886fe4a2-79ca-4dbc-b1e1-93984e7e3f44' width = '500'>
-   
-   5. `Modify` **site.config.js** file in **your** forked repo.
-   > 💡 NOTE. I changed **2 RED PART**
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/3d9c0da5-92bc-4372-8752-7bfc810b4986' width = '500'>
+- Enhance with relevant images/videos. Create an article cover using guidelines found in this [Figma template](https://www.figma.com/file/GoSswiJdLKq8VLDA6dt51b/Untitled?type=design&node-id=0%3A1&mode=design&t=a6wTFhNPybXOwS0z-1).
+- Include instructive admin panel screenshots.
+- Offer a demo for applications, if feasible.
 
-   6. Move and `login` to vercel.
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/07742ad0-4766-43b0-9ebd-5311f9711bc2' width = '500'>
+#### **Final Thoughts/ Conclusion:**
 
-   7. `Build` new project using **Add New...**
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/517d46be-c9bf-4181-aaa5-e9bd2fcdc822' width = '500'>
+- Conclude with a summary, actionable insights, and at least two resource references.
+- Prompt readers to join the [Devwrite Discord community](https://discord.gg/2TDfbF3k).
 
-   8. `Import` **your forked morethan-log repository**
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/07742ad0-4766-43b0-9ebd-5311f9711bc2' width = '500'>
+#### **SEO Elements:**
 
-   9. `Add` **Environment variabes** to vercel project
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/703b50a3-3a90-4915-ab73-1baca4c285f8' width = '500'>
+- *Meta-title:* Keep it under 60 characters, incorporating keywords.
+- *Meta-description:* Summarize the post in under 155 characters, making it inviting and keyword-rich.
+ 
+ ## Before you submit, make sure you: 
+  
+ ✅ Follow writing guidelines
+  
+ ✅ Proofread your article for errors in grammar, spelling, and typography.
 
-   10. `Wait` for the deployment to complete. After the deployment is successful, you should see an image like the one below.
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/a7d72caa-4354-4f81-9577-c773faeed7c6' width = '500'>
+ ✅ Run and test your code before pushing it to GitHub.
 
-   🥳 Congratulations. Now check out your blog
-   
-   <img src='https://github.com/jhk0530/morethan-log/assets/6457691/3876a273-a270-47ef-a2ad-663519d9e537' width = '500'>
-
-</details>
-
-## Contributing
-
-Check out the [Contributing Guide](.github/CONTRIBUTING.md).
-
-### Contributors
-
-<!--
-Contributors template:
-<a href="https://github.com/{username}"><img src="{src}" width="50px" alt="{username}" /></a>&nbsp;&nbsp;
--->
-
-<a href="https://github.com/morethanmin/morethan-log/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=morethanmin/morethan-log" />
-</a>
-
-## Support
-
-morethan-log is an MIT-licensed open source project. It can grow thanks to the sponsors and support from the amazing backers.
-
-### Sponsors
-
-<!--
-Sponsors template:
-<a href="https://github.com/{uesrname}"><img src="{src}" width="50px" alt="{username}" /></a>&nbsp;&nbsp;
--->
-
-<p>
-<a href="https://github.com/siyeons"><img src="https://avatars.githubusercontent.com/u/35549653?v=4" width="50px" alt="siyeons" /></a>&nbsp;&nbsp;
-</p>
+ ✅ Fork and copy your code sample to the code-samples folder in the [sample-projects repository](https://github.com/devwriteafrica/sample-projects) and create a PR. 
+  
+PS: We do not approve PRs for articles that don't follow our community guidelines or are flagged as being AI-generated.
 
 ## License
 
 The [MIT License](LICENSE).
-# blog
-# blog
-# blog
-# blog
