@@ -1,6 +1,6 @@
 # Devwrite Africa Article Guidelines
 
-Thank you for your interest in contributing to the [Devwrite Africa Community Blog](https://devrite.com)! We welcome everyone in the Devwrite Africa community to share their experiences, insights, and expertise with fellow developers worldwide. This is also an opportunity to get mentored by senior technical writers and gain the hand-on experience you need to land your dream technical writing job.
+Thank you for your interest in contributing to the [Devwrite Africa Community Blog](https://devwriteafrica.com)! We welcome everyone in the Devwrite Africa community to share their experiences, insights, and expertise with fellow developers worldwide. This is also an opportunity to get mentored by senior technical writers and gain the hand-on experience you need to land your dream technical writing job.
 
 ## General Guidelines
 To ensure we publish only quality and relevant article and tutorials, we only accept and publish four articles per month and We require contributors to follow these steps: 
@@ -82,7 +82,7 @@ Organize with subheadings and lists for readability. Key aspects include:
 
 #### **Visuals:**
 
-- Enhance with relevant images/videos. Create an article cover using guidelines found in this [Figma template](https://www.figma.com/file/GoSswiJdLKq8VLDA6dt51b/Untitled?type=design&node-id=0%3A1&mode=design&t=a6wTFhNPybXOwS0z-1).
+- Enhance with relevant images/videos. Create an article cover using guidelines found in this [Figma template](https://www.figma.com/file/GoSswiJdLKq8VLDA6dt51b/Untitled?type=design&node-id=0%3A1&mode=design&t=Ia9dGsys0RBY8mqD-1 ).
 - Include instructive admin panel screenshots.
 - Offer a demo for applications, if feasible.
 
