@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/Build a blog with AstroJS using MDX Integration.jpg'
+date: { start_date: '2023-09-01' }
+thumbnail: '/covers/build-a-blog-with-astroJS-using-mdx-ntegration.jpg'
 type: [ 'Post' ] 
 slug: 'build-a-blog-with-astroJS-using-mdx-ntegration'
 category: [ '📗 Dev' ]
@@ -9,7 +9,7 @@ tags: [ 'MDX' ,'Astro.js', 'WYSIWYG editors','static site' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'Build a blog with AstroJS using MDX Integration'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Sept 1 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
@@ -50,9 +50,8 @@ npx astro add mdx
 ```
 
 To preview the current state of your application, run `npm run dev` in the CLI and open up the localhost URL in your browser. The result you will get is similar to the image below:
-![](https://i.imgur.com/I062Shb.png)
 
-
+![Preview AstroJS starter page](https://i.imgur.com/I062Shb.png)
 
 ## Creating App Components
 
@@ -348,7 +347,7 @@ Here, we are making use of `getStaticPath` to check the slugUrl and return the a
 ## Final Results
 
 Congratulations on completing this tutorial. Now, if we run our application with the `npm run dev` command, we will get the following results:
-![](https://i.imgur.com/6vuD5GK.gif)
+![Preview the AstroJS MDX integrated blog](https://i.imgur.com/6vuD5GK.gif)
 
 NB: All styles used in this tutorial can be found in the following GitHub repo.
 

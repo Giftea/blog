@@ -1,21 +1,21 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-10-16' }
+thumbnail: '/covers/building-a-static-web-app-with-factor.js.jpg'
 type: [ 'Post' ]
 slug: 'building-a-static-web-app-with-factor.js'
 category: [ '📗 Dev' ]
-tags: [ 'Docs' ,'Morethanlog' ]
-author: [ ["Ekekenta Clinton"] ]
+tags: [ 'JavaScript' ,'FactorJS', 'Static Site Generator', 'TypeScript', 'NodeJS' ]
+author: [ "Ekekenta Clinton" ]
 title: 'Building a Static Web App with FactorJS'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Oct 16 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
 ## **Introduction**
 
-With the complexity of application development increasing, there were certain areas for improvement when developers tried to scale applications with JavaScript, as it was not originally designed to create full-stack applications. As a result, different frameworks have been released over the years to facilitate development. FactorJS is a JavaScript library designed to work with its frameworks, offering flexibility in application development and enforcing the best practices and structure of that framework.
+Scaling web applications with JavaScript can be challenging, as it wasn't originally meant for building full-stack applications. To address this, various frameworks have been developed over time, to make development easier. FactorJS is a JavaScript library specifically designed to complement the existing Javascript frameworks. It not only brings flexibility to the development process but also ensures adherence to the best practices and structures recommended by these frameworks
 
 
 ## **What is FactorJS?**
@@ -244,7 +244,7 @@ To handle our application state in the `HomePage` component, we will define a se
 Here, we have added an array of four task items, each with a completion status. We will iterate through this array and render a list of items:
 
 
-```
+```html
    <div class=" mt-10 flex justify-center items-center">
       <!-- tasks display -->
      <ul>
@@ -328,14 +328,7 @@ Here we show a button to return to the `homepage` component and a task. To run t
 
 Running the application will produce the following result:
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.gif "image_tooltip")
-
-
+![FactorJS static web application preview](/unnamed.gif "image_tooltip")
 
 ## **Conclusion**
 

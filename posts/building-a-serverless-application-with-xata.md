@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-10-08' }
+thumbnail: '/covers/building-a-serverless-application-with-xata.jpg'
 type: [ 'Post' ]
 slug: 'building-a-serverless-application-with-xata'
 category: [ '📗 Dev' ]
@@ -9,11 +9,9 @@ tags: [ 'Serverless' ,'xata','serverless database', 'node.js' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'Building a Serverless Application with Xata'
 status: [ 'Public' ]
-createdTime: 'Friday Dec 30 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Oct 08 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
-
-# 
 
 Do you require that level of adaptability in the early stages of developing an app? Xata is a database-focused platform that seamlessly integrates a database with your serverless app. You are not required to manage the underlying infrastructure because Xata will scale your database. You are not required to update software or migrate data to a new server.
 
@@ -57,15 +55,15 @@ Now that you've installed it, you have a global `xata` command that you can invo
 
 The next thing we will do here is to design our database by navigating to our [workspace](https://app.xata.io/signin) and creating the table for our to-do app. While in, click on the `Add a table` to add an empty table and name it `items`.
 
-![](https://i.imgur.com/X6cLFCf.png)
+![Preview of Xata database for navigating a workspace](https://i.imgur.com/X6cLFCf.png)
 
 Congratulations! You've successfully created a table called `items`:
 
-![](https://i.imgur.com/4OCZkXZ.png)
+![Xata Items table](https://i.imgur.com/4OCZkXZ.png)
 
 Now, let's start adding other requirements of our to-do app, which include  `label` (the task name) and `is_done` (checks if a task is done or not) by clicking on the "+" sign close to the id column. We will add a `string` column and name it `label`. After that, add a `boolean` column and name it `is_done`. Your columns should look like this:
 
-![](https://i.imgur.com/SyqEXYt.png)
+![Xata database column preview](https://i.imgur.com/SyqEXYt.png)
 
 Well done! We will learn how to create a new API key in the following steps.
 
@@ -81,7 +79,7 @@ When we run the command above, we are given two options: * create a new existing
 
 Because this is a new project, we'll start by selecting the first option after running the command above, which will prompt us to create a new API key in the browser. 
 
-![](https://i.imgur.com/EvTrhtW.png)
+![Creating a new Xata API key preview](https://i.imgur.com/EvTrhtW.png)
 
 Great! close the browser window after creating an API key, then come back to Xata. We will make the UI components for our task manager application in the following step.
 
@@ -210,7 +208,9 @@ xata init
 
 Running the above command will launch a questionnaire to assist us in configuring our project. Let's answer the questions and generate code.
 
- If your project development server is still running, now is a good time to kill it and restart it because the Xata CLI added your API key to '.env'. Next. Since '.env' has changed, we'll need to restart your development server.![](https://i.imgur.com/49W18Ds.png)
+ If your project development server is still running, now is a good time to kill it and restart it because the Xata CLI added your API key to '.env'. Next. Since '.env' has changed, we'll need to restart your development server.
+ 
+ ![Xata CLI tool preview](https://i.imgur.com/49W18Ds.png)
 
 If you see the output above, it means you've successfully set up Xata configurations in your app.
 
@@ -321,7 +321,7 @@ In the code above, we created a component that contains a single text input and 
 
 We can then add this new component to our `index.js` page:
 
-![](https://i.imgur.com/oZCO9Dy.png)
+![Using Xata serverless API in a React component](https://i.imgur.com/oZCO9Dy.png)
 
 When we run it, we can now add new to-do list items.
 
@@ -377,7 +377,7 @@ export const getServerSideProps = async () => {
 
 We use the `getMany` query method to return a subset of records in the table query results in an array.
 
-![](https://i.imgur.com/CnCIFzd.png)
+![Fetching data from Xata serverless database](https://i.imgur.com/CnCIFzd.png)
 
 That's it! Now, our to-do app is actively making a query to Xata and rendering to-do list items from our database!
 
@@ -448,7 +448,7 @@ export default handler;
 
 Let's save and revisit our app.
 
-![](https://i.imgur.com/u2zb4OF.png)
+![Updating data in Xata serverless database](https://i.imgur.com/u2zb4OF.png)
 
 Great! It works! We're successfully updating data on Xata.
 
@@ -555,7 +555,7 @@ Now also add a column to the `items` table, with the name `user` of type `link` 
 
 The Xata CLI regenerates the schema for the XataClient automatically once the migration is completed. If you did not use the Xata CLI to create the `users` table and the `link` column, make sure to run `xata codegen` to regenerate your `XataClient` to include the latest schema updates.
 
-![](https://i.imgur.com/LCdre21.png)
+![Xata CLI tool preview](https://i.imgur.com/LCdre21.png)
 
 Let's add some Basic Auth to our Next.js App. First, note that passwords should never be stored in plain text, so we will use [bcrypt](https://www.npmjs.com/package/bcrypt) to handle cryptography for us, so that passwords are hashed before they are stored.
 
@@ -710,11 +710,11 @@ We've made it! Now our Next.js app is authenticating users, storing their passwo
 ## Test Application
 Let's test our application to ensure everything is working as expected. Refresh your interface. You will be required to sign in, and you can do so by entering your `username` and `password`. You will find the details you've entered inside your `users` database table:
 
-![](https://i.imgur.com/yEKQv25.png)
+![Xata serverless database autentication](https://i.imgur.com/yEKQv25.png)
 
 Only when you've successfully signed in will you be able to perform the CRUD operations.
 
-![](https://i.imgur.com/tSBnjAx.png)
+![Preview a Xata serverless application](https://i.imgur.com/tSBnjAx.png)
 
 
 ## Conclusion

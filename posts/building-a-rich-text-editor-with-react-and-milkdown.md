@@ -1,15 +1,15 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-09-24' }
+thumbnail: '/covers/building-a-rich-text-editor-with-react-and-milkdown.jpg'
 type: [ 'Post' ]
 slug: 'building-a-rich-text-editor-with-react-and-milkdown'
 category: [ '📗 Dev' ]
 tags: [ 'Milkdown' ,'rich text editor', 'react' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ "Ekekenta Clinton" ]
 title: 'Building a rich text editor with React and Milkdown'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Sept 24 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
@@ -17,7 +17,7 @@ In today's digital age, a rich text editor is crucial for any application requir
 
 In this tutorial, we'll explore how to build a rich text editor with React.js and Milkdown. 
 
-In the following sections, I will walk you through creating a React component that allows users to type in Markdown and preview the result in real time. Whether a beginner or an experienced React developer, this post will provide valuable insights and a solid foundation for building your rich text editor.
+In the following sections, I will walk you through creating a React component that allows users to type in Markdown and preview the result in real time. Whether you are a beginner or an experienced React developer, this post will provide valuable insights and a solid foundation for building your rich text editor.
 
 
 ## What is Milkdown?
@@ -105,7 +105,7 @@ export default App;
 ```
 In the above code snippet, we've replaced the code in the `App.js` to render the **Wrapper** component.
 
-![](https://i.imgur.com/8gIIChd.png)
+![Milkdown rich-text editor preview](https://i.imgur.com/8gIIChd.png)
 
 At this point, nothing serious is happening to expect that we have created and styled the header part of our text editor.
 
@@ -155,7 +155,7 @@ export const Wrapper = ()=>{
 }
 ```
 
-![](https://i.imgur.com/7V2VOTB.png)
+![Previw of the rendered MilkdownEditor component](https://i.imgur.com/7V2VOTB.png)
 
 Now we've successfully built out a rich-text editor using Milkdown. But all we can do in our text editor is to add plain Markdown formatted texts. Let's add a few plugins to add features like file upload and history, enabling you to undo an action on the editor.
  
@@ -195,7 +195,7 @@ export const MilkdownEditor = () => {
 
 Add another text to the editor and press **Ctrl-Z** or **CMD-Z** to undue it. Also, Drag and drop a file to test the file upload feature.
 
-![](https://i.imgur.com/Ubr9lAB.png)
+![Preview of Milkdown rich-text editor with drag and drop functionality](https://i.imgur.com/Ubr9lAB.png)
 
 
 ## Add Themes to Editor
@@ -260,7 +260,7 @@ Now add the styles below to the `App.css` file to add themes to the editor.
 
 ```
 
-![](https://i.imgur.com/hFGS7cv.png)
+![Adding theme to Milkdown rich-text editor](https://i.imgur.com/hFGS7cv.png)
 
 We've successfully added a theme to our rich-text editor.
 
@@ -268,7 +268,7 @@ We've successfully added a theme to our rich-text editor.
 ## Test Editor
 Next, use the content [here](https://raw.githubusercontent.com/icode247/milkdown-editor/main/public/test.md) and add to the editor to test the final result after adding the theme.
 
-![](https://i.imgur.com/LXqlHeT.png)
+![Final preview of Milkdown rich-text editor](https://i.imgur.com/LXqlHeT.png)
 
 
 ## Conclusion

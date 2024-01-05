@@ -1,14 +1,14 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
 date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+thumbnail: '/covers/how-to-implement-pagination-with-webiny-headless-cms-in-svelte.jpg'
 type: [ 'Post' ]
 slug: 'how-to-implement-pagination-with-webiny-headless-cms-in-svelte'
 category: [ '📗 Dev' ]
 tags: [ 'Webiny' ,'Node.js','Opensource', 'Headless CMS' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'How to implement Pagination with Webiny Headless CMS in Svelte'
-status: [ 'Public' ]
+status: [ 'Draft' ]
 createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
@@ -29,12 +29,12 @@ To follow along with this tutorial, you need to have the following:
 
 ## Setting Up Webiny CMS
 With the above requirements met, let's create a Webiny project with the following CLI command:
-```
+```sh
 npx create-webiny-project blog-app
 ```
 Once the installation is complete, we will deploy the Webiny project with the following command:
 
-```
+```sh
 yarn webiny deploy
 ```
 Once the deployment is completed, you'll be presented with the URL to access your Admin Area and finish the installation.
@@ -111,7 +111,7 @@ In the above code snippet, we instantiate `ApolloClient` by passing in our headl
 ## Create Apolo Query
 To get the data in our model, we need to create an Apolo query to request the data we need. Add the code snippet below to the `App.svelte` component.
 
-```
+```js
   const GET_BLOGS = gql`
     query getBlogs {
       listBlogs {
@@ -319,7 +319,7 @@ In the code above, we're paginating the data in the items list we created. So in
 
 Next show the UI with the code snippet below.
 
-```htmlembedded
+```jsx
 <!-- ... -->
 <main>
   <Header />
@@ -415,7 +415,7 @@ Now you can click the next button to view the data on the next page.
 ## Paginating with numbered pages
 We have paginated our Svelte application with numbered pages, let's paginate it with numbered pages by adding the code snippet below.
 
-```htmlembedded
+```jsx
 <main>
 <!-- ... -->
 	

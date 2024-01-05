@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-11-01' }
+thumbnail: '/covers/how-to-build-a-documentation-website-with-docusaurus.jpg'
 type: [ 'Post' ]
 slug: 'how-to-build-a-documentation-website-with-docusaurus'
 category: [ '📗 Dev' ]
@@ -9,7 +9,7 @@ tags: [ 'Docusaurus' ,'API Documentation','React' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'How to Build a Documentation Website with Docusaurus'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Nov 01 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
@@ -67,7 +67,7 @@ Once the installation is complete, open up the project folder in your preferred 
 ```
 Here we have a simple welcome text and a button which will direct users to the `docs` route and display our documentation. To run the application, enter the `npm start` command in the CLI. When our application starts up on the local server, we will get the following result in the browser:
 
-![](https://i.imgur.com/zqO62u6.png)
+![Docusaurus deocumentation website preview](https://i.imgur.com/zqO62u6.png)
 
 
 
@@ -106,7 +106,7 @@ In the code block above, we added the title for the navigation bar, a single rou
 ## Creating Docs
 
 To create docs for our documentation application, we simply need to add the files to the `docs` folder. Markdown files added here are treated as individual pages. If you wish to have a collection of content with sub-categories, you simply need to create a folder containing your Markdown files (or sub-folders for more sub-categories).  In the `docs` folder, delete the files provided by the `classic`  template. Create a new file `example.md`, and then add the following Markdown to it:
-```
+```sh
     # Working with Markdowns
     
     > I really like using Markdown.
@@ -129,7 +129,7 @@ To create docs for our documentation application, we simply need to add the file
     ```
 ```
 Create a second page `learning.md` with the following Markdown:
-```
+```sh
     # Learning Some Markdown 
     ## h2 Heading
     ### h3 Heading
@@ -180,7 +180,7 @@ Create a second page `learning.md` with the following Markdown:
 ```
 If we run the application now and head to the `Documentation` route, we will have the following results:
 
-![](https://i.imgur.com/dNoiqDv.gif)
+![Adding routing to Docusaurus documentation website](https://i.imgur.com/dNoiqDv.gif)
 
 
 
@@ -210,7 +210,7 @@ The code block above by default uses the `docs` directory to generate a list of 
 ```
 Here, we specified the `example` and `learning` files for our sidebar. Subcategories can be created as illustrated above, using the `items` array for each element of the category. Now, in our sidebar, we have the same result:
 
-![](https://i.imgur.com/kvFLlI0.png)
+![Adding items to Docusaurus documentation website](https://i.imgur.com/kvFLlI0.png)
 
 
 
@@ -241,7 +241,7 @@ The `static` folder of our application is used to store non-code files to be use
 ```
 I have added an image named `sidebar.png` to my `static` directory. With this, the image shows up on the documentation page:
 
-![](https://i.imgur.com/tOZyjwK.png)
+![Adding sidebar to Docusaurus documentation website](https://i.imgur.com/tOZyjwK.png)
 
 
 
@@ -251,7 +251,7 @@ I have added an image named `sidebar.png` to my `static` directory. With this, t
 
 Running through our application from the beginning, we have the following results:
 
-![](https://i.imgur.com/uMbEWib.gif)
+![Completed Docusaurus documentation websites](https://i.imgur.com/uMbEWib.gif)
 
 
 ## Conclusion

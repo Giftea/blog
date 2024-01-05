@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-10-01' }
+thumbnail: '/covers/building-a-searchable-support-hub-in-typeScript.jpg'
 type: [ 'Post' ]
 slug: 'building-a-searchable-support-hub-in-typeScript'
 category: [ '📗 Dev' ]
@@ -9,7 +9,7 @@ tags: [ 'Search engines' ,'Typescript','Opensource', 'yext' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'Building a Searchable Support Hub in Typescript'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Oct 01 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
@@ -50,7 +50,7 @@ After Yext has been installed, delete all the files under the `src` folder, exce
 
 The structure of the app you’re creating will be as follows:
 
-```
+```sh
 src/
 ┣ App.tsx
 ┣ RecentSearch.tsx

@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-11-16' }
+thumbnail: '/covers/how-to-build-your-own-react-component-with-react-aria.jpg'
 type: [ 'Post' ]
 slug: 'how-to-build-your-own-react-component-with-react-aria'
 category: [ '📗 Dev' ]
@@ -9,7 +9,7 @@ tags: [ 'React Aria' ,'React','Opensource', 'frontend', 'serverside rendering' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'How to build your own React component with React Aria'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Nov 16 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
@@ -63,8 +63,7 @@ The above command will prompt you to complete options for your project. Your sel
 ![](https://i.imgur.com/Xw0gTlh.png)
 
 
-Then wait while Refine installs the required packages for this project. Once that is done, let's install React Aria. React Aria published all components as a separate module for adoptable sake, so you can choose to install the components independently or as all the package.
-> Eg `npm install @react-aria/button`]
+Then wait while Refine installs the required packages for this project. Once that is done, let's install React Aria. React Aria published all components as a separate module for adoptable sake, so you can choose to install the components independently or as all the package. Eg `npm install @react-aria/button`
 
 To save our time, we'll install all the component which is packaged under the  @react-aria scope with the command below.
 
@@ -371,17 +370,17 @@ export default App;
 ```
 
 You should see the output below on the browser.
-![](https://i.imgur.com/9AeWfJ9.png)
+![Using React Aria component](https://i.imgur.com/9AeWfJ9.png)
 
 Now if you click the `Open Dialog` you should see the form modal below.
 
-![](https://i.imgur.com/SdQPegi.png)
+![Opening React Aria dialog](https://i.imgur.com/SdQPegi.png)
 
 You can use the tools like [Rollup.tsx](https://rolluptsx.org/guide/en/) to bundle the component library and share it with your friends.
 
 
 ## Adding Server side rendering
-> []SSR, or server-side rendering, is the process of rendering components to HTML on the server as opposed to only on the client. A comparable strategy is static rendering, except instead of pre-rendering pages to HTML on each request but rather at build time. To make components using React Aria work with SSR, you will need to wrap your application in an SSRProvider. This signals to all nested React Aria hooks that they are being rendered in an SSR context. Update the `index.tsx` file with the code snippet below.
+SSR, or server-side rendering, is the process of rendering components to HTML on the server as opposed to only on the client. A comparable strategy is static rendering, except instead of pre-rendering pages to HTML on each request but rather at build time. To make components using React Aria work with SSR, you will need to wrap your application in an SSRProvider. This signals to all nested React Aria hooks that they are being rendered in an SSR context. Update the `index.tsx` file with the code snippet below.
 
 ```javascript
 ...

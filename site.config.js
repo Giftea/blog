@@ -3,17 +3,17 @@ const CONFIG = {
 
   profile: {
     image:"",
-    name: "devwrites",
-    role: "frontend developer",
-    email: "devwritesafrica@gmail.com",
-    github: "devwrites",
+    name: "devwrite Africa",
+    role: "open source community",
+    email: "hello@devwriteafrica.com",
+    github: "devwriteafrica",
     twitter: 'https://twitter.com/devwritesafrica',
     discord: "https://discord.gg/2TDfbF3k",
   },
   projects: [
     {
       name: `Devwrites Africa`,
-      href: "https://github.com/morethanmin/morethan-log",
+      href: "https://github.com/devwriteafrica/blog",
     },
   ],
   // blog setting (required)
@@ -23,7 +23,7 @@ const CONFIG = {
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
+  link: "https://devwriteafrica.com",
   since: 2022, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash

@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-09-16' }
+thumbnail: '/covers/building-a-full-stack-application-with-remult-using-react-frontend.jpg'
 type: [ 'Post' ]
 slug: 'building-a-full-stack-application-with-remult-using-react-frontend'
 category: [ '📗 Dev' ]
@@ -9,11 +9,9 @@ tags: [ 'fullstack' ,'Remult', 'react', 'postgress' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'Building a Full-Stack Application with Remult using React Frontend'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Sept 16 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
-
-# 
 
 ## Introduction
 Building a full-stack application can be very hectic for developers because of the operations involved, from setting up the server to building the front end and consuming the backend APIs. Things can be more hectic when you are working with two different tech stacks. However, since the introduction of Node.js and other Javascript frameworks, things have been a little bit simpler for Javascript developers because they can now create full-stack applications using Javascript without having to learn a different language for the backend. Remult has made things much more manageable by enabling developers to create a full-stack application in a single application without needing to set up an application for the project's server side.
@@ -38,13 +36,13 @@ Prior knowledge of Javascript is also required. The code for this tutorial is av
 ## Getting started
 Let's start by cloning the Remult React starter application by running the command below on our terminal.
 
-```
+```sh
 git clone https://github.com/remult/react-vite-express-starter.git todo-app
 ```
 
 Then change the directory into the project folder and install the required packages in the `package.json` file by running the command below.
 
-```
+```sh
 cd todo-app
 npm install 
 ```
@@ -60,18 +58,18 @@ Now let's set up the backend part of our application to connect the application 
 ### Connecting to Database
 Let's start by connecting the application to a PostgreSQL database. But first, initilize your PostgreSQL database locally to ensure it's online with the command:
 
-```
+```sh
 docker run --name todo-postgres -e POSTGRES_PASSWORD=postgres_password -d postgres -p 5432
 ```
 
 Next, install the PostgreSQL package with the command below.
 
-```
-npm I pg
+```sh
+npm i pg
 ```
 Then, we'll do that in the `server/index.ts` file with the code snippets below.
 
-```
+```js
 import { api } from "./api";
 import express from "express";
 import { remultExpress } from "remult/remult-express";
@@ -98,7 +96,7 @@ In our code snippet, we `remultExpress` middleware which takes in a `dataProvide
 ### Creating Entities
 With the database connection, let's create some entities for our application. We'll make two entities, one for storing the user's records and the other for storing each registered user's todos. So first, create a `shared` folder in the `server` directory. Then in the `shared` folder, create a `user.ts` file and add the code snippets below.
 
-```
+```js
 import { Entity, Fields, IdEntity } from 'remult';
 
 @Entity('users', {
@@ -120,7 +118,7 @@ In the above code snippet, we define our User entity using the `@Entity` decorat
 
 Next, create a `todo.ts` file in the **shared** folder and add the code snippet below. 
 
-```
+```js
 import { Allow, Entity, Fields, IdEntity } from 'remult';
 
 @Entity('todos', {
@@ -142,7 +140,7 @@ Here we also defined our `Todo` entity class using the `@Entity` decorator and e
 ### Creating Table Relationship
 Now we need to assign each todo to the user that created them. We need to implement table relationships in our User entity to do that. Update the code in the user.ts file with the code snippet below.
 
-```
+```js
 import { Entity, Fields,IdEntity } from 'remult';
 import { Todo } from './todo';
 
@@ -172,7 +170,7 @@ Here we added another field to allow each todo created to be referenced in the u
 
 In the server's `api.ts` file, register the **Todo** and **User** entities with Remult by including it in the `entities` array within the options object passed to the `remultExpress()` middleware. The new line should look like this:
 
-```
+```js
 import { remultExpress } from 'remult/remult-express';
 import { User } from './shared/user';
 import { Todo } from './shared/todo';
@@ -184,14 +182,15 @@ export const api = remultExpress({
 
 ### Implements User Authentication
 We need to add some level of security to the application to allow only authenticated users access to the application. To do that, we need to implement user authentication. This is a straightforward process with Remult. But first, you must install the express session-cookies package with the below command.
-```
+
+```sh
 npm i cookie-session express-session
 npm i --save-dev @types/cookie-session @types/express-session
 ```
 
 Then create an `auth.ts` file in the `server`  folder and add the code snippets below:
 
-```
+```js
 import express, { Router, Request, Response } from "express";
 import { remultExpress } from "remult/remult-express";
 import { remult } from "remult";
@@ -270,7 +269,7 @@ auth.get("/api/currentUser", (req, res) => res.json(req.session.id));
 ```
 In the above code snippet, we created our express endpoint to authenticate a user, store their record in a session, signup a user, get each user and sign in a user out of the application by clearing their Session. Now update the code in the `server/index.ts` file with the code below to use the cookies-session and the auth middlewares.
 
-```
+```js
 //...
 
 import session from "cookie-session";
@@ -287,7 +286,7 @@ app.use(session({
 ## Setting up the Frontend
 At this point, we are done with the backend. Next, let's move on to the frontend part of the application. Let's start by creating the UI of the application and displaying the user's todos with the code snippet below.
 
-```
+```js
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Todo } from "./server/shared/todo";
@@ -352,7 +351,7 @@ export default App;
 ```
 In the above code snippet, we created two functions to fetch users' todos from the backend API and to create a new todo using the fetch API. Then we created state variables to store the todos and the current user's details. Then update the code in the `App.css` file with the stylesheets below.
 
-```
+```css
 body{
 	margin: 0;
 	padding: 0;
@@ -493,11 +492,11 @@ button:hover{
 ```
 
 If you refresh the application, you should see the output below:
-![](https://i.imgur.com/QgH4eFi.png)
+![RemultJS todo application preview](https://i.imgur.com/QgH4eFi.png)
 
 Next, create an `Auth.ts` component in the **src** folder and add the code snippets below to implement the Authentication in the Frontend.
 
-```
+```js
 import { use } from "passport";
 import { useState, useEffect } from "react";
 import UserAuth from "./components/UserAuth";
@@ -531,7 +530,7 @@ In the above code snippet, we created an **Auth** component. This component will
 
 Now update the code in the `main.ts` file to wrap the **App** component with the Auth component.
 
-```
+```js
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
@@ -547,7 +546,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 ```
 Lastly, create a component folder in the src directory. Inside the component folder, create **UserAuth** component to render the signup/sign in form with the code snippets below.
 
-```
+```js
 import { useState } from "react";
 
 const UserAuth = (props: any) => {
@@ -619,7 +618,7 @@ export default UserAuth
 ```
 So if you refresh the application, the UserAuth component will be rendered for a user to signup or sign in as shown below:
 
-![](https://i.imgur.com/L4OjOTd.png)
+![RemultJs auth component preview](https://i.imgur.com/L4OjOTd.png)
 
 ## Conslusion
 This tutorial explored how to build a Full-Stack Application with Remult using React Frontend. First, we discussed what Remult is all about and why developers should consider using this framework. Then, to illustrate this point, we showed how to build a blog application demonstration table relationship and Authentication.

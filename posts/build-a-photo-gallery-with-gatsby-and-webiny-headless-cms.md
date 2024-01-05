@@ -1,6 +1,6 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
+date: { start_date: '2023-09-08' }
 thumbnail: '/covers/build-a-photo-gallery-with-gatsby-and-webiny-headless-cms.jpg'
 type: [ 'Post' ]
 slug: 'build-a-photo-gallery-with-gatsby-and-webiny-headless-cms'
@@ -9,7 +9,7 @@ tags: [ 'Webiny' ,'Node.js','Opensource', 'Headless CMS' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'Build a Photo Gallery with Gatsby and Webiny Headless CMS'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Sept 08 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 

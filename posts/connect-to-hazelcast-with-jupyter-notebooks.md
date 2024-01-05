@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-10-24' }
+thumbnail: '/covers/connect-to-hazelcast-with-jupyter-notebooks.jpg'
 type: [ 'Post' ]
 slug: 'connect-to-hazelcast-with-jupyter-notebooks'
 category: [ '📗 Dev' ]
@@ -9,7 +9,7 @@ tags: [ 'Hazelcast' ,'Python','Jupyter Notebook' ]
 author: [ ["Ekekenta Clinton"] ]
 title: 'Connect to Hazelcast with Jupyter Notebooks'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Oct 24 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
  
@@ -33,11 +33,13 @@ Before getting started with this tutorial, ensure you have the following;
 ## Installing Jupyter Notebook
 To get started, we need to install and create a folder for this project. Open your terminal and run the command below:
  
-`mkdir hazelcast && cd hazelcast`
+```sh
+mkdir hazelcast && cd hazelcast`
+```
  
 Then create and activate a virtual environment by running the following commands.
  
-```
+```sh
 #install virtual env.
 pip install virtualenv 
  
@@ -50,12 +52,12 @@ source env/bin/activate
  
 If you see a similar output to the one in the screenshot below, your virtual environment has been successfully activated.
  
-![](https://i.imgur.com/0t05cWr.png)
+![Activating virtual environment](https://i.imgur.com/0t05cWr.png)
  
  
 Now install and run the Jupyter notebook with the command below:
  
-```
+```sh
 # install
 pip install jupyter notebook
  
@@ -65,22 +67,22 @@ jupyter-notebook
  
 The above command will install, run, and open the Jupyter notebook at port 8888 in your browser.
  
-![](https://i.imgur.com/QssTxPh.png)
+![Running Jupyter Notebook](https://i.imgur.com/QssTxPh.png)
  
 Finally, you need to create a notebook and install the Hazelcast python client with Jupyter notebook. Click on the **New** tab at the top right corner of the Jupyter notebook on your browser, and select **Python 3 (ipykernel)**
  
-![](https://i.imgur.com/K7fFClh.png)
+![Creating a new Jupyter Notebook](https://i.imgur.com/K7fFClh.png)
  
 You should have a new notebook opened on a new tab as shown on the screenshot below:
  
-![](https://i.imgur.com/VRB7T2I.png)
+![A new Jupyter Notebook](https://i.imgur.com/VRB7T2I.png)
  
 On the notebook cell copy and paste the code below and press **Run** to install the Hazelcast python client.
  
-```
+```sh
 !pip install hazelcast-python-client[stats]
 ```
-![](https://i.imgur.com/BU7IVn2.png)
+![Installing hazelcast-python-client](https://i.imgur.com/BU7IVn2.png)
  
  
  
@@ -89,41 +91,41 @@ With the Jupyter notebook installed and set up, proceed to create a Hazelcast cl
  
 Once the sign-up is completed, you'll be redirected to the cluster page. Click the **CREATE NEW CLUSTER** button
  
-![](https://i.imgur.com/noVfdlR.png)
+![Sign in to hazelcast](https://i.imgur.com/noVfdlR.png)
  
 Then you'll be redirected to the plans page where you'll be asked to choose your preferred plan. Go ahead and choose anyone that suits your project. But this tutorial uses the **Basic Free** plan.
  
 Next, is the info page. Leave everything by default and hit the **CREATE FREE CLUSTER** button. 
  
-![](https://i.imgur.com/gbErwC2.png)
+![Creating a new hazelcast cluster](https://i.imgur.com/gbErwC2.png)
  
  
 Lastly, you will be redirected to the Confirmation and Summary page. If are satisfied with the order depending on your use case, press the CONTINUE CREATING CLUSTER button.
  
-![](https://i.imgur.com/kO1kob0.png)
+![Confirming hazelcast cluster creation](https://i.imgur.com/kO1kob0.png)
  
 At this point, your cluster should be created and ready to be used in your applications.
  
-![](https://i.imgur.com/Iw6lmGp.png)
+![hazelcast cluster preview](https://i.imgur.com/Iw6lmGp.png)
 
  
 ## Connecting  Cluster with Jupyter
 Now to connect your Hazelcast cluster to your Python project, click on the  **CONNECT YOUR APPLICATION** button.
  
-![](https://i.imgur.com/PH7eC8a.png)
+![Connecting to Jupyter Notebook cluster](https://i.imgur.com/PH7eC8a.png)
  
 Then select **Python** from the select field at the top right-hand side of the page. Hazelcast will then provide you with instructions on how to download the zip file. Carefully follow the instructions to download and run the file.
  
 Once you have tested the Hazelcast client cluster, let's connect your cluster to your Python application. On your Jupyter notebook, import hazelcast, and the logging module.
  
-```
+```python
 import hazelcast
 import logging
 ```
  
 Then import your application to your Hazelcast cluster with the code snippet below;
  
-```
+```python
 logging.basicConfig(level=logging.INFO)
 client = hazelcast.HazelcastClient(
     cluster_name="<NAME>",
@@ -133,14 +135,14 @@ client = hazelcast.HazelcastClient(
 ```
 Replace `<NAME>` and `<TOKEN>` with your cluster name and discovery token. You can find them on the **Python Client Quick Setup** page in the **Python Client Advanced Setup** section.
  
-![](https://i.imgur.com/nhg4CYx.png)
+![Setting up hazelcast Python client](https://i.imgur.com/nhg4CYx.png)
  
 
 ## Saving Data with SQL
  
 To save data in your Hazelcast cluster using SQL, you need to create a [mapping](https://docs.hazelcast.com/hazelcast/5.0/sql/mapping-to-maps). To create city mapping for your cluster with the code snippet below.
  
-```
+```python
 def run_sql_mapping(client):
     print("Creating a mapping...")
    
@@ -153,13 +155,13 @@ def run_sql_mapping(client):
  
 Once your mapping has been created, you'll see a similar output to the one on the screenshot below on the cell.
  
-![](https://i.imgur.com/qTlCBbN.png)
+![Mapping a new hazelcast cluster](https://i.imgur.com/qTlCBbN.png)
  
  
  
 Next, update the **run_sql_mapping** function to insert a new record with the code snippet below;
  
-```
+```python
     print("Inserting data via SQL...")
     insert_query = """
     INSERT INTO cities VALUES
@@ -176,12 +178,12 @@ Next, update the **run_sql_mapping** function to insert a new record with the co
 ```
 In the above code snippet, we are inserting city data into the cities map. If you run the application, you will see the output below on your terminal.
  
-![](https://i.imgur.com/wezDPPT.png)
+![Inserting new records in hazelcast cluster](https://i.imgur.com/wezDPPT.png)
  
  
 Lastly, update the **run_sql_mapping** function to retrieve the data you just created with the code snippet below.
  
-```
+```python
     print("Retrieving all the data via SQL...")
     result = hz_client.sql.execute("SELECT * FROM cities").result()
     for row in result:
@@ -193,7 +195,7 @@ Lastly, update the **run_sql_mapping** function to retrieve the data you just cr
 ```
 You should also see the output below when you run the application.
  
-![](https://i.imgur.com/Q7bAeKC.png)
+![Retrieving data from hazelcast cluster](https://i.imgur.com/Q7bAeKC.png)
  
 To test it we need to call the **run_sql_mapping** and click the play button to run the application.
  
@@ -201,23 +203,23 @@ To test it we need to call the **run_sql_mapping** and click the play button to 
 ## Saving Data to Memory
 Hazelcast provides many distributed data structures for writing data to memory on your cluster. A distributed map is one of the most commonly used methods for writing data to memory, which is duplicated and dispersed across a cluster and is stored as key/value pairs in maps. To get started, run the Hazelcast local cluster, with the command below:
 
-```
+```sh
 hz start
 ```
 If you see the output below, then your Hazelcast local cluster has successfully started.
 
-![](https://i.imgur.com/ih7uPoY.png)
+![Started hazelcast local cluster](https://i.imgur.com/ih7uPoY.png)
 
 Then, open another terminal tab and start the console with the command below;
 
-```
+```sh
 hz-cli console
 ```
 
 You should see the output below on your console. 
 Now add the code below on your Jupyter cell to import, connect to the Hazelcast local cluster and create a mapping with the code snippet below.
 
-```
+```python
 import hazelcast
 
 client = hazelcast.HazelcastClient()
@@ -225,7 +227,7 @@ distributed_map = client.get_map("distributed-map")
 ```
 Next, add some data to the cluster, fetch, and get the map size of the cluster with the code snippet below;
 
-```
+```python
 //add some data
 distributed_map.set("name", "John Doe").result()
 distributed_map.set("age", "21").result()
@@ -245,7 +247,7 @@ client.shutdown()
 
 The **client.shoutdown ** will shut down the client once the operations have been performed. If you the application, you should see the output below.
 
-![](https://i.imgur.com/2Kb3kE6.png)
+![Shutting down a hazelcast cluster](https://i.imgur.com/2Kb3kE6.png)
 
  
 ## Conclusion

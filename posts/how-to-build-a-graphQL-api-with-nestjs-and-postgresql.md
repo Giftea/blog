@@ -1,15 +1,15 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
-date: { start_date: '2023-01-22' }
-thumbnail: '/covers/cover.jpg'
+date: { start_date: '2023-11-08' }
+thumbnail: '/covers/how-to-build-a-graphQL-api-with-nestjs-and-postgresql.jpg'
 type: [ 'Post' ]
 slug: 'how-to-build-a-graphQL-api-with-nestjs-and-postgresql'
 category: [ '📗 Dev' ]
 tags: [ 'GraphQL' ,'Node.js','Opensource', 'API', 'Nest.js', 'PostgresSQL' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ "Ekekenta Clinton" ]
 title: 'How to build a GraphQL API with NestJS and PostgreSQL'
 status: [ 'Public' ]
-createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'
+createdTime: 'Mon Nov 08 2023 12:19:17 GMT+0100 (GMT+01:00)'
 fullWidth: false
 ---
 
@@ -18,7 +18,7 @@ fullWidth: false
 This tutorial will guide you through how to create a GraphQL API in Nestjs and PostgreSQL. You'll create a NestJS application, connect to a PostgreSQL database, and create a GraphQL API.
 
 ## What is GraphQL?
-GraphQL is an open-source data query and manipulation language for APIs. GraphQL allows you to respond to API queries using your current data and the GraphQL query language. With GraphQL, you can provide customers with the freedom to ask for only the information they require and nothing more; easily evolve your API over time, and enable strong developer tools. GraphQL also gives clients a clear and understandable description of the data in your API.
+GraphQL is an open-source data query language designed for querying and modifying data in APIs. GraphQL allows you to respond to API queries using your current data and the GraphQL query language. With GraphQL, you can provide customers with the freedom to ask for only the information they require and nothing more; easily evolve your API over time, and enable strong developer tools. GraphQL also gives clients a clear and understandable description of the data in your API.
 
 ## Prerequisites
 Before getting started with this tutorial, ensure you have the following tools installed.
@@ -27,7 +27,7 @@ Before getting started with this tutorial, ensure you have the following tools i
 
 ## Setting Up a New Application
 Once the above-mentioned requirements are met, proceed to install the Nestjs CLI and create a new project by running the following commands:
-```
+```sh
 npm i -g @nestjs/cli
 nest new 
 ```
@@ -36,7 +36,7 @@ These commands will install the Nestjs CLI and create a new Nestjs project.
 ## Adding GraphQL
 After the NestJS project has been created, move on to the next step—adding GraphQL to the application. To get started, install the required dependencies by running the following command:
 
-```
+```sh
 npm i --save @nestjs/graphql graphql-tools graphql apollo-server-express pg @nestjs/typeorm typeorm 
 ```
 In the above command, you’ve installed the Apolo GraphQL server, which Nestjs uses to connect Nestjs to GraphQL. You've also pg PostgreSQL module: it will enable you to connect your application to a PostgreSQL database and perform operations on it.
@@ -275,17 +275,17 @@ In the above code snippet, we create our resolver function using the `@Resolver(
 ## Testing the API
 Now let's test the GrapQL APIs. To do that, run the server with the command below.
 
-```
+```sh
 npm start
 ```
 
 Then open the GraphQL playground on your browser by navigating to the URL [`localhost:3000/graphql` ](http://localhost:3000/graphql). 
 Then create a new user as shown on the screenshot below.
 
-![](https://i.imgur.com/QNmt0w5.png)
+![NestJS GraphQl playground preview](https://i.imgur.com/QNmt0w5.png)
 
 Next, fetch all the users as shown in the screenshot below.
-![](https://i.imgur.com/uonqNUk.png)
+![Fetch data from NestJS GraphQL playground](https://i.imgur.com/uonqNUk.png)
 
 
 ## Conclusion
