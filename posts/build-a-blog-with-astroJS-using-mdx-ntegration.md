@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'build-a-blog-with-astroJS-using-mdx-ntegration'
 category: [ '📗 Dev' ]
 tags: [ 'MDX' ,'Astro.js', 'WYSIWYG editors','static site' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ "Ekekenta Clinton" ]
 title: 'Build a blog with AstroJS using MDX Integration'
 status: [ 'Public' ]
 createdTime: 'Mon Sept 1 2023 12:19:17 GMT+0100 (GMT+01:00)'
