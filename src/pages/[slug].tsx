@@ -58,6 +58,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     data.slug = fileName.replace(/\.md$/, "")
     return data
   })
+  console.log(allPostsData)
 
   // Find the specific post by slug
   const postDetail = allPostsData.find((post) => post.slug === slug)
@@ -83,7 +84,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const DetailPage: NextPageWithLayout = () => {
   const post = usePostQuery()
-
+console.log(post)
   if (!post) return <CustomError />
 
   const image =
