@@ -1,0 +1,34 @@
+2024-01-06T10:34:40.987Z    +74ms [debug] Config loaded {"version":"2.39.2","cdkVersion":"2.110.1","constructsVersion":"10.3.0","config":{"name":"my-app","region":"us-east-1","stage":"root","ssmPrefix":"/sst/my-app/root/"},"metafile":{"inputs":{"sst.config.js":{"bytes":104,"imports":[],"format":"esm"}},"outputs":{".sst.config.1704537280923.mjs":{"imports":[],"exports":["default"],"entryPoint":"sst.config.js","inputs":{"sst.config.js":{"bytesInOutput":115}},"bytes":297}}},"paths":{"config":"/Users/ekekentaodionyenfe/Desktop/morethan-log/sst.config.js","root":"/Users/ekekentaodionyenfe/Desktop/morethan-log","out":"/Users/ekekentaodionyenfe/Desktop/morethan-log/.sst","artifacts":"/Users/ekekentaodionyenfe/Desktop/morethan-log/.sst/artifacts"}}
+2024-01-06T10:34:41.766Z   +779ms [debug] dev is ready
+2024-01-06T10:34:41.770Z     +4ms [debug] Using AWS profile 
+2024-01-06T10:34:41.772Z     +2ms [debug] Created AWS client IoTClient
+2024-01-06T10:34:41.773Z     +1ms [debug] Getting IoT endpoint
+2024-01-06T10:34:41.781Z     +8ms [debug] Fetching all metadata
+2024-01-06T10:34:41.782Z     +1ms [debug] Initializing bootstrap context
+2024-01-06T10:34:41.782Z     +0ms [debug] Created AWS client CloudFormationClient
+2024-01-06T10:34:41.808Z    +26ms [debug] Created AWS client RDSDataClient
+2024-01-06T10:34:42.211Z   +403ms [debug] [kysely-codegen] Loaded kyseley type generator
+2024-01-06T10:34:42.517Z   +306ms [debug] Synthesizing stacks...
+2024-01-06T10:34:42.527Z    +10ms [debug] Created AWS client STSClient
+2024-01-06T10:34:42.874Z   +347ms [debug] Using IoT endpoint: a2yx9bpohwk5hv-ats.iot.us-east-1.amazonaws.com
+2024-01-06T10:34:43.043Z   +169ms [debug] Loaded bootstrap status
+2024-01-06T10:34:43.043Z     +0ms [debug] Bootstrap context initialized {"status":"ready","version":"7.2","bucket":"sstbootstrap-useast124d14e4b-elf4oo1aohn1"}
+2024-01-06T10:34:43.045Z     +2ms [debug] Created AWS client S3Client
+2024-01-06T10:34:43.091Z    +46ms [debug] Publishing event {"type":"cli.dev","properties":{"stage":"root","app":"my-app"},"sourceID":"626a11c428604a132a20420354f43979"}
+2024-01-06T10:34:43.091Z     +0ms [debug] Encoded iot message into 1 parts
+2024-01-06T10:34:43.195Z   +104ms [debug] IoT error {"errno":-3008,"code":"ENOTFOUND","syscall":"getaddrinfo","hostname":"a2yx9bpohwk5hv-ats.iot.us-east-1.amazonaws.com","type":"error","target":{"_events":{},"_eventsCount":0,"readyState":3,"bytesReceived":0,"extensions":null,"protocol":"","_binaryType":"arraybuffer","_closeFrameReceived":false,"_closeFrameSent":false,"_closeMessage":"","_closeTimer":null,"_finalized":true,"_closeCode":1006,"_receiver":null,"_sender":null,"_socket":null,"_ultron":null,"protocolVersion":13,"_isServer":false,"url":"wss://a2yx9bpohwk5hv-ats.iot.us-east-1.amazonaws.com/mqtt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5FTZA4BZVFAXR3ME%2F20240106%2Fus-east-1%2Fiotdevicegateway%2Faws4_request&X-Amz-Date=20240106T103443Z&X-Amz-SignedHeaders=host&X-Amz-Signature=69812c746d5b149a406a2e4781ed691faa1c552133144b9bd966130e2df98ccb","_req":null}}
+2024-01-06T10:34:43.196Z     +1ms [debug] IoT closed
+2024-01-06T10:34:43.640Z   +444ms [debug] Using identity Account: 905418170483 User: AIDA5FTZA4BZYOP7LXXPF
+2024-01-06T10:34:43.645Z     +5ms [debug] Generating types in /Users/ekekentaodionyenfe/Desktop/morethan-log/.sst/types
+2024-01-06T10:34:43.648Z     +3ms [debug] Running 0 deferred tasks with concurrency: 7
+2024-01-06T10:34:43.686Z    +38ms [debug] 
+2024-01-06T10:34:43.686Z     +0ms [debug] Loading v2 AWS SDK
+2024-01-06T10:34:43.686Z     +0ms [debug] Finished synthesizing
+2024-01-06T10:34:43.686Z     +0ms [debug] Directory /Users/ekekentaodionyenfe/Desktop/morethan-log/.sst/dist
+2024-01-06T10:34:43.688Z     +2ms [debug] Checksum next e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 old 
+2024-01-06T10:34:43.689Z     +1ms [debug] Fetching app metadata
+2024-01-06T10:34:44.195Z   +506ms [debug] Fetched metadata from 0 stacks
+2024-01-06T10:34:44.196Z     +1ms [debug] IoT reconnecting...
+2024-01-06T10:34:44.203Z     +7ms [debug] IoT error {"errno":-3008,"code":"ENOTFOUND","syscall":"getaddrinfo","hostname":"a2yx9bpohwk5hv-ats.iot.us-east-1.amazonaws.com","type":"error","target":{"_events":{},"_eventsCount":0,"readyState":3,"bytesReceived":0,"extensions":null,"protocol":"","_binaryType":"arraybuffer","_closeFrameReceived":false,"_closeFrameSent":false,"_closeMessage":"","_closeTimer":null,"_finalized":true,"_closeCode":1006,"_receiver":null,"_sender":null,"_socket":null,"_ultron":null,"protocolVersion":13,"_isServer":false,"url":"wss://a2yx9bpohwk5hv-ats.iot.us-east-1.amazonaws.com/mqtt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5FTZA4BZVFAXR3ME%2F20240106%2Fus-east-1%2Fiotdevicegateway%2Faws4_request&X-Amz-Date=20240106T103444Z&X-Amz-SignedHeaders=host&X-Amz-Signature=f901335c03195fca592204dff6ceecfa2d036baf57434e948502acf558498715","_req":null}}
+2024-01-06T10:34:44.203Z     +0ms [debug] IoT closed
+2024-01-06T10:34:44.729Z   +526ms [debug] Fetching app metadata: not found

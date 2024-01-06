@@ -9,7 +9,6 @@ const PageDetail: React.FC<Props> = () => {
   const data = usePostQuery()
 
   if (!data) return null
-  console.log(data.recordMap)
   return (
     <StyledWrapper>
       <MarkdownRenderer content={data.recordMap as unknown as string} />
