@@ -30,8 +30,8 @@ const filter: FilterPostsOptions = {
 //   }
 // }
 export async function getStaticPaths() {
-  console.log('getStaticPaths()')
-  const files = fs.readdirSync(path.join("posts"))
+  const postsDirectory = path.join(process.cwd(), "posts")
+  const files = fs.readdirSync(postsDirectory)
 
   const paths = files.map((filename) => ({
     params: {
@@ -46,7 +46,6 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log('getStaticProps')
   const slug = context.params?.slug
 
   // Replace this with the logic from the second getStaticProps
