@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'building-a-full-stack-application-with-remult-using-react-frontend'
 category: [ '📗 Dev' ]
 tags: [ 'fullstack' ,'Remult', 'react', 'postgress' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a Full-Stack Application with Remult using React Frontend'
 status: [ 'Public' ]
 createdTime: 'Mon Sept 16 2023 12:19:17 GMT+0100 (GMT+01:00)'

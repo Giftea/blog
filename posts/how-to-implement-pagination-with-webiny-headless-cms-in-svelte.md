@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'how-to-implement-pagination-with-webiny-headless-cms-in-svelte'
 category: [ '📗 Dev' ]
 tags: [ 'Webiny' ,'Node.js','Opensource', 'Headless CMS' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'How to implement Pagination with Webiny Headless CMS in Svelte'
 status: [ 'Draft' ]
 createdTime: 'Mon Jan 23 2023 12:19:17 GMT+0100 (GMT+01:00)'

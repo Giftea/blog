@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'how-to-build-a-graphQL-api-with-nestjs-and-postgresql'
 category: [ '📗 Dev' ]
 tags: [ 'GraphQL' ,'Node.js','Opensource', 'API', 'Nest.js', 'PostgresSQL' ]
-author: [ "Ekekenta Clinton" ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'How to build a GraphQL API with NestJS and PostgreSQL'
 status: [ 'Public' ]
 createdTime: 'Mon Nov 08 2023 12:19:17 GMT+0100 (GMT+01:00)'

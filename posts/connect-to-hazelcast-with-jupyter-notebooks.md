@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'connect-to-hazelcast-with-jupyter-notebooks'
 category: [ '📗 Dev' ]
 tags: [ 'Hazelcast' ,'Python','Jupyter Notebook' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Connect to Hazelcast with Jupyter Notebooks'
 status: [ 'Public' ]
 createdTime: 'Mon Oct 24 2023 12:19:17 GMT+0100 (GMT+01:00)'

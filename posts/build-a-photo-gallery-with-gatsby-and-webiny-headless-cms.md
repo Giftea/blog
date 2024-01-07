@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'build-a-photo-gallery-with-gatsby-and-webiny-headless-cms'
 category: [ '📗 Dev' ]
 tags: [ 'Webiny' ,'Node.js','Opensource', 'Headless CMS' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Build a Photo Gallery with Gatsby and Webiny Headless CMS'
 status: [ 'Public' ]
 createdTime: 'Mon Sept 08 2023 12:19:17 GMT+0100 (GMT+01:00)'

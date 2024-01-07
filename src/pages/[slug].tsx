@@ -30,6 +30,7 @@ const filter: FilterPostsOptions = {
 //   }
 // }
 export async function getStaticPaths() {
+  console.log('getStaticPaths()')
   const files = fs.readdirSync(path.join("posts"))
 
   const paths = files.map((filename) => ({
@@ -40,11 +41,12 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  console.log('getStaticProps')
   const slug = context.params?.slug
 
   // Replace this with the logic from the second getStaticProps
@@ -58,7 +60,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     data.slug = fileName.replace(/\.md$/, "")
     return data
   })
-  console.log(allPostsData)
 
   // Find the specific post by slug
   const postDetail = allPostsData.find((post) => post.slug === slug)
@@ -84,7 +85,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const DetailPage: NextPageWithLayout = () => {
   const post = usePostQuery()
-console.log(post)
   if (!post) return <CustomError />
 
   const image =

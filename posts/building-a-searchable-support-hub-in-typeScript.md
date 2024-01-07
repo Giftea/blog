@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'building-a-searchable-support-hub-in-typeScript'
 category: [ '📗 Dev' ]
 tags: [ 'Search engines' ,'Typescript','Opensource', 'yext' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a Searchable Support Hub in Typescript'
 status: [ 'Public' ]
 createdTime: 'Mon Oct 01 2023 12:19:17 GMT+0100 (GMT+01:00)'

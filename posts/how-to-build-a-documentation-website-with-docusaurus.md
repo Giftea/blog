@@ -6,7 +6,7 @@ type: [ 'Post' ]
 slug: 'how-to-build-a-documentation-website-with-docusaurus'
 category: [ '📗 Dev' ]
 tags: [ 'Docusaurus' ,'API Documentation','React' ]
-author: [ ["Ekekenta Clinton"] ]
+author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'How to Build a Documentation Website with Docusaurus'
 status: [ 'Public' ]
 createdTime: 'Mon Nov 01 2023 12:19:17 GMT+0100 (GMT+01:00)'
