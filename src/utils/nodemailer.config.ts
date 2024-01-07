@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true, // use SSL
   auth: {
-    user: "easeplan.team@gmail.com",
-    pass: "1234cisco!@#$",
+    user: "hello@devwriteafrica.com",
+    pass: "1234cisco",
   },
 })
 
@@ -17,7 +17,7 @@ export async function sendEmail({ to, html }: any) {
   const info = await transporter.sendMail({
     from: "easeplan.team@gmail.com",
     to,
-    subject: "Welcome to the Devwrites Africa community!",
+    subject: "Welcome to the Devwrite Africa community!🥳",
     html,
   })
   console.log("Message sent: %s", info.messageId)

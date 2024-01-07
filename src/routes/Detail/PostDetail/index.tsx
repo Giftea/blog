@@ -1,13 +1,10 @@
 import React from "react"
 import PostHeader from "./PostHeader"
 import Footer from "./PostFooter"
-import CommentBox from "./CommentBox"
 import Category from "src/components/Category"
 import styled from "@emotion/styled"
-import NotionRenderer from "../components/NotionRenderer"
 import usePostQuery from "src/hooks/usePostQuery"
 import MarkdownRenderer from "src/components/MarkdownRenderer"
-import { marked } from "marked"
 
 type Props = {}
 
