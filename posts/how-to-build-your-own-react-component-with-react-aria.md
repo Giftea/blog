@@ -4,8 +4,7 @@ date: { start_date: '2023-11-16' }
 thumbnail: '/covers/how-to-build-your-own-react-component-with-react-aria.jpg'
 type: [ 'Post' ]
 slug: 'how-to-build-your-own-react-component-with-react-aria'
-category: [ '📗 Dev' ]
-tags: [ 'React Aria' ,'React','Opensource', 'frontend', 'serverside rendering' ]
+tags: [ 'React Aria' ,'React','Opensource', 'frontend']
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'How to build your own React component with React Aria'
 status: [ 'Public' ]

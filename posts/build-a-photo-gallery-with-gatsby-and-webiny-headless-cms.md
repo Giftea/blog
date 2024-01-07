@@ -4,7 +4,6 @@ date: { start_date: '2023-09-08' }
 thumbnail: '/covers/build-a-photo-gallery-with-gatsby-and-webiny-headless-cms.jpg'
 type: [ 'Post' ]
 slug: 'build-a-photo-gallery-with-gatsby-and-webiny-headless-cms'
-category: [ '📗 Dev' ]
 tags: [ 'Webiny' ,'Node.js','Opensource', 'Headless CMS' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Build a Photo Gallery with Gatsby and Webiny Headless CMS'
@@ -42,7 +41,7 @@ npm init gatsby
 
 The above command will prompt for the name of the project. We’ll name it `Gallery`, preferred language (JavaScript or TypeScript), CMS, styling tools and additional features. Your selections should look like the one in the screenshot below:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de5a79cb-b739-4c21-b453-62670ac8c51e/Untitled.png)
+![Create a new Gatsby application](/blog-images/Untitled.png)
 
 Now move into the project folder and start the application on the local development server with the command below:
 
@@ -172,30 +171,30 @@ Once the deployment is completed, you'll be presented with the URL to access you
 
 On the home page, click the `New Content Model` button on the `Headless CMS` tab to define a photo model. Then click on the **NEW MODEL** button and supply the details in the screenshot below:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8ad46fcc-f3d2-4765-b765-d08912caae12/Untitled.png)
+![Create new Webiny content model](/blog-images/Untitled1.png)
 
 Then press the `+ CREATE MODEL` button and add the fields in the screenshot below and click the `save` button:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44872df6-e4e5-4b4c-ab41-c909de967d85/Untitled.png)
+![create a photo model](/blog-images/Untitled2.png)
 
 In the `photo` model, we added a `Text` field for the `title`, `Long text` for the `description` of the photos and a `Files` field for the `photo`.
 
 Next, go back and create another model for the `Comment` with the details shown in the screenshot below:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a7d000a2-dbcc-4680-abf4-8ecf6a7c50b4/Untitled.png)
+![create a comment model](/blog-images/Untitled3.png)
 
 Then press the `+ CREATE MODEL` button and add the fields in the screenshot below and click the `save` button:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/817b9696-40a9-4b26-8dc2-ae89f12e8cad/Untitled.png)
+![create model button](/blog-images/Untitled4.png)
 
 In the Comment model, we added the Text field for the user's name and Long text for their comment. Now let’s update the **photo** model to reference the **Comment** model. To do that, add a `Reference` field to the **photo** model as shown below:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08c19587-b2cb-4619-96bf-463361e2e7ff/Untitled.png)
+![Create model relationships](/blog-images/Untitled5.png)
 
 Remember to check the `Use as a list reference` because there will be multiple comments for a particle photo post and select `Comment` in the `Content Models` field. Now create some photo records and some comments data in the photo model and use the Webiny internal file manager
 to upload the photo of the post.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2994add1-d060-45f1-8013-6414e665f524/Untitled.png)
+![Create model relationships with Comments model](/blog-images/Untitled6.png)
 
 Then go to the comments model and publish the comments model to remove the warnings in the comments Reference fields.
 
@@ -203,7 +202,7 @@ Then go to the comments model and publish the comments model to remove the warni
 
 To connect the Webiny CMS to our application, we’ll need to generate an API Token to authorize our application to access the contents in our CMS.  The Token can be generated in the **access management** section of the settings tab, found in the left navigation window of the dashboard. Fill in the form to create a new API key. In the content section, select **all locales**, and in the form builder dropdown, choose **Custom Access**. Enter the following details in the provided fields:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9cccdbf7-f74e-492d-8246-713eeaa3b01b/Untitled.png)
+![connect headless cms to gatsby application](/blog-images/Untitled7.png)
 
 Now back to our application, create a `.env.development` file in the root directory of your project and add the TOKEN and go back to your terminal and copy the **Read API** into the file :
 
@@ -314,7 +313,7 @@ export const Head = () => <title>Home Page</title>;
 
 We ran a static query in the above code snippet to fetch data from our API using the Gatsby `useStaticQuery` hook. Then we created a `slugify` function to create a slug from the titles of our photo posts. This way, we can access the dynamic pages, we’ll be creating for each photo in our CMS. Then we looped through all the records and render them to the users, so if you refresh the application, you’ll see the result below:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bfd88e36-7ace-4258-9632-87bcaf8006b2/Untitled.png)
+![display data from headless cms in Gatsby application](/blog-images/Untitled8.png)
 
 ## Add a single photo view.
 
@@ -414,7 +413,7 @@ export const Head = () => <title>Photo Single</title>;
 
 Here we destructured the photo from the pageContext to display the details of the photos. Then we iterate through the comments made on this post and display them too. Now, if you refresh the browser, you should be able to access the photo single page.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/118bbb99-9cbf-4b58-830a-93c5b8f5e224/Untitled.png)
+![display photos stored in Webiny headless cms](/blog-images/Untitled9.png)
 
 ## Conclusion
 

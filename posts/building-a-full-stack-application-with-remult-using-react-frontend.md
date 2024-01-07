@@ -4,7 +4,6 @@ date: { start_date: '2023-09-16' }
 thumbnail: '/covers/building-a-full-stack-application-with-remult-using-react-frontend.jpg'
 type: [ 'Post' ]
 slug: 'building-a-full-stack-application-with-remult-using-react-frontend'
-category: [ '📗 Dev' ]
 tags: [ 'fullstack' ,'Remult', 'react', 'postgress' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a Full-Stack Application with Remult using React Frontend'

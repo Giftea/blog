@@ -4,8 +4,7 @@ date: { start_date: '2023-10-16' }
 thumbnail: '/covers/building-a-static-web-app-with-factor.js.jpg'
 type: [ 'Post' ]
 slug: 'building-a-static-web-app-with-factor.js'
-category: [ '📗 Dev' ]
-tags: [ 'JavaScript' ,'FactorJS', 'Static Site Generator', 'TypeScript', 'NodeJS' ]
+tags: [ 'JavaScript' ,'FactorJS', 'TypeScript', 'NodeJS' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a Static Web App with FactorJS'
 status: [ 'Public' ]

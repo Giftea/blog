@@ -4,7 +4,6 @@ import { formatDate } from "src/libs/utils"
 import Tag from "../../../components/Tag"
 import { TPost } from "../../../types"
 import Image from "next/image"
-import Category from "../../../components/Category"
 import styled from "@emotion/styled"
 
 type Props = {
@@ -17,11 +16,6 @@ const PostCard: React.FC<Props> = ({ data }) => {
   return (
     <StyledWrapper href={`/${data.slug}`}>
       <article>
-        {category && (
-          <div className="category">
-            <Category>{category}</Category>
-          </div>
-        )}
         {data.thumbnail && (
           <div className="thumbnail">
             <Image
@@ -88,14 +82,15 @@ const StyledWrapper = styled(Link)`
       z-index: 10;
     }
 
-    > .thumbnail {
+    >  .thumbnail {
+      overflow: hidden;
       position: relative;
+      border-radius: 1.5rem;
       width: 100%;
-      background-color: ${({ theme }) => theme.colors.gray2};
-      padding-bottom: 66%;
+      padding-bottom: 50%;
 
-      @media (min-width: 1024px) {
-        padding-bottom: 50%;
+      img {
+        object-fit: contain;
       }
     }
     > .content {

@@ -4,7 +4,6 @@ date: { start_date: '2023-09-24' }
 thumbnail: '/covers/building-a-rich-text-editor-with-react-and-milkdown.jpg'
 type: [ 'Post' ]
 slug: 'building-a-rich-text-editor-with-react-and-milkdown'
-category: [ '📗 Dev' ]
 tags: [ 'Milkdown' ,'rich text editor', 'react' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a rich text editor with React and Milkdown'

@@ -50,12 +50,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
           </div>
           {data.thumbnail && (
             <div className="thumbnail">
-              <Image
-                src={data.thumbnail}
-                css={{ objectFit: "cover" }}
-                fill
-                alt={data.title}
-              />
+              <Image src={data.thumbnail} layout="fill" alt={data.title} />
             </div>
           )}
         </nav>
@@ -115,14 +110,12 @@ const StyledWrapper = styled.div`
     .thumbnail {
       overflow: hidden;
       position: relative;
-      margin-bottom: 1.75rem;
       border-radius: 1.5rem;
       width: 100%;
-      background-color: ${({ theme }) => theme.colors.gray4};
-      padding-bottom: 66%;
+      padding-bottom: 50%;
 
-      @media (min-width: 1024px) {
-        padding-bottom: 50%;
+      img {
+        object-fit: contain;
       }
     }
   }

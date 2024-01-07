@@ -52,7 +52,6 @@ const parseMarkdownFiles = (directory: string) => {
       thumbnail: matterResult.data.thumbnail,
       type: matterResult.data.type,
       slug: matterResult.data.slug || fileName.replace(".md", ""),
-      category: matterResult.data.category,
       tags: matterResult.data.tags,
       author: matterResult.data.author,
       title: matterResult.data.title,

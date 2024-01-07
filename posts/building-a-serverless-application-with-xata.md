@@ -4,8 +4,7 @@ date: { start_date: '2023-10-08' }
 thumbnail: '/covers/building-a-serverless-application-with-xata.jpg'
 type: [ 'Post' ]
 slug: 'building-a-serverless-application-with-xata'
-category: [ '📗 Dev' ]
-tags: [ 'Serverless' ,'xata','serverless database', 'node.js' ]
+tags: [ 'serverless database' ,'xata', 'node.js' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a Serverless Application with Xata'
 status: [ 'Public' ]

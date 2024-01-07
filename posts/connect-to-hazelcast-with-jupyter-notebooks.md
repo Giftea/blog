@@ -4,7 +4,6 @@ date: { start_date: '2023-10-24' }
 thumbnail: '/covers/connect-to-hazelcast-with-jupyter-notebooks.jpg'
 type: [ 'Post' ]
 slug: 'connect-to-hazelcast-with-jupyter-notebooks'
-category: [ '📗 Dev' ]
 tags: [ 'Hazelcast' ,'Python','Jupyter Notebook' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Connect to Hazelcast with Jupyter Notebooks'

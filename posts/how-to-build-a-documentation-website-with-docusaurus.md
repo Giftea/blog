@@ -4,7 +4,6 @@ date: { start_date: '2023-11-01' }
 thumbnail: '/covers/how-to-build-a-documentation-website-with-docusaurus.jpg'
 type: [ 'Post' ]
 slug: 'how-to-build-a-documentation-website-with-docusaurus'
-category: [ '📗 Dev' ]
 tags: [ 'Docusaurus' ,'API Documentation','React' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'How to Build a Documentation Website with Docusaurus'

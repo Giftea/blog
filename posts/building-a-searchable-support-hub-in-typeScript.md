@@ -4,8 +4,7 @@ date: { start_date: '2023-10-01' }
 thumbnail: '/covers/building-a-searchable-support-hub-in-typeScript.jpg'
 type: [ 'Post' ]
 slug: 'building-a-searchable-support-hub-in-typeScript'
-category: [ '📗 Dev' ]
-tags: [ 'Search engines' ,'Typescript','Opensource', 'yext' ]
+tags: [ 'Typescript','Opensource', 'yext' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Building a Searchable Support Hub in Typescript'
 status: [ 'Public' ]

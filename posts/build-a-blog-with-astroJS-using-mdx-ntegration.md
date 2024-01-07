@@ -4,8 +4,7 @@ date: { start_date: '2023-09-01' }
 thumbnail: '/covers/build-a-blog-with-astroJS-using-mdx-ntegration.jpg'
 type: [ 'Post' ] 
 slug: 'build-a-blog-with-astroJS-using-mdx-ntegration'
-category: [ '📗 Dev' ]
-tags: [ 'MDX' ,'Astro.js', 'WYSIWYG editors','static site' ]
+tags: [ 'MDX' ,'Astro.js', 'WYSIWYG editors' ]
 author: [ { name: "Ekekenta Clinton", profile_photo: "/authors-avatar/ekekenta-clinton.png" } ]
 title: 'Build a blog with AstroJS using MDX Integration'
 status: [ 'Public' ]
