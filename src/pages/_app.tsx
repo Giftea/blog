@@ -16,21 +16,6 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   })
   return (
     <>
-      <Head>
-        {/* Add the Google Tag Manager script */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8CZW3LFRXM"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-8CZW3LFRXM');
-          `}
-        </script>
-      </Head>
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
           <RootLayout>{getLayout(<Component {...pageProps} />)}</RootLayout>

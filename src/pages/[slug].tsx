@@ -1,5 +1,4 @@
 import Detail from "src/routes/Detail"
-import { filterPosts } from "src/libs/utils/notion"
 import { CONFIG } from "site.config"
 import { NextPageWithLayout } from "../types"
 import CustomError from "src/routes/Error"
@@ -20,15 +19,6 @@ const filter: FilterPostsOptions = {
   acceptType: ["Paper", "Post", "Page"],
 }
 
-// export const getStaticPaths = async () => {
-//   const posts = await getPosts()
-//   const filteredPost = filterPosts(posts, filter)
-
-//   return {
-//     paths: filteredPost.map((row) => `/${row.slug}`),
-//     fallback: true,
-//   }
-// }
 export async function getStaticPaths() {
   const postsDirectory = path.join(process.cwd(), "posts")
   const files = fs.readdirSync(postsDirectory)

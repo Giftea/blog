@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
 date: { start_date: '2023-10-16' }
-thumbnail: '/covers/building-a-static-web-app-with-factor.js.jpg'
+thumbnail: '/covers/building-a-static-web-app-with-factor.jpg'
 type: [ 'Post' ]
 slug: 'building-a-static-web-app-with-factor.js'
 tags: [ 'JavaScript' ,'FactorJS', 'TypeScript', 'NodeJS' ]
@@ -14,7 +14,7 @@ fullWidth: false
 
 ## **Introduction**
 
-Scaling web applications with JavaScript can be challenging, as it wasn't originally meant for building full-stack applications. To address this, various frameworks have been developed over time, to make development easier. FactorJS is a JavaScript library specifically designed to complement the existing Javascript frameworks. It not only brings flexibility to the development process but also ensures adherence to the best practices and structures recommended by these frameworks
+Scaling web applications with JavaScript can be challenging, as it wasn't originally intended for building full-stack applications. To address this, various frameworks have been developed over time to make development easier. FactorJS is a JavaScript library specifically designed to complement existing JavaScript frameworks. It not only brings flexibility to the development process but also ensures adherence to the best practices and structures recommended by these frameworks.
 
 
 ## **What is FactorJS?**

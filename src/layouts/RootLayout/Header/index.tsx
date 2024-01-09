@@ -1,3 +1,4 @@
+import Link from "next/link"
 import NavBar from "./NavBar"
 import ThemeToggle from "./ThemeToggle"
 import styled from "@emotion/styled"
@@ -11,11 +12,13 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
   return (
     <StyledWrapper>
       <div data-full-width={fullWidth} className="container">
-        <img
-          src="/android-chrome-384x384.png"
-          alt=""
-          style={{ width: "100px" }}
-        />
+      <StyledWrapperLink href="/">
+          <img
+            src="/android-chrome-384x384.png"
+            alt=""
+            style={{ width: "100px" }}
+          />
+        </StyledWrapperLink>
         <div className="nav">
           <ThemeToggle />
           <NavBar />
@@ -26,7 +29,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
 }
 
 export default Header
-
+const StyledWrapperLink = styled(Link)``
 const StyledWrapper = styled.div`
   z-index: ${zIndexes.header};
   position: sticky;
