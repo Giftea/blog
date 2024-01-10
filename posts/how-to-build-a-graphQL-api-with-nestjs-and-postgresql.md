@@ -25,15 +25,15 @@ Before getting started with this tutorial, ensure you have the following tools i
 - [PostgreSQL](https://www.postgresql.org/)
 
 ## Setting Up a New Application
-Once the above-mentioned requirements are met, proceed to install the Nestjs CLI and create a new project by running the following commands:
+Once you've met the above requirements, move forward by installing the Nestjs CLI and initiating a new project with the following commands:
 ```sh
 npm i -g @nestjs/cli
 nest new 
 ```
-These commands will install the Nestjs CLI and create a new Nestjs project.
+The above commands will initiate the installation of the Nestjs CLI and the create a new Nestjs project.
 
 ## Adding GraphQL
-After the NestJS project has been created, move on to the next step—adding GraphQL to the application. To get started, install the required dependencies by running the following command:
+After the NestJS project has been created, move on to the next step—adding GraphQL to the application. To get started, install the project dependencies with the command below: 
 
 ```sh
 npm i --save @nestjs/graphql graphql-tools graphql apollo-server-express pg @nestjs/typeorm typeorm 
@@ -116,7 +116,7 @@ export class UserEntity {
     updatedAt: Date;
 }
 ```
-In the above code snippet, we imported the decorators we need to create an entity. Using these decorators we defined the properties of the entity. We have the `id` field to generate random id’s for each record in the database using the `@PrimaryGeneratedColumn()` decorator, the **name**, **email**, and **password** field using the `@Column` decorator, the **createdAt** and **updatedAt** fields to save the date a record was created and updated using the `@CreateDateColumn()` and `@UpdateDateColumn()`.
+In the provided code snippet, we imported in the necessary decorators for entity creation. The used the decortors o define the properties of the entity. We have the `id` field to generate random id’s for each record in the database using the `@PrimaryGeneratedColumn()` decorator, the **name**, **email**, and **password** field using the `@Column` decorator, the **createdAt** and **updatedAt** fields to save the date a record was created and updated using the `@CreateDateColumn()` and `@UpdateDateColumn()`.
 
 > Your entity file name should have a `.entity.ts` or `.entity.js` extension. Because the `TypeOrmModule` will look for files with those extensions and load convert to a database table.
 
