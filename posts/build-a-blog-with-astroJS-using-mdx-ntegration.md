@@ -1,7 +1,7 @@
 ---
 id: '9836c73d-70e7-42b7-8a3f-b20d993ae265'
 date: { start_date: '2023-09-01' }
-thumbnail: '/covers/build-a-blog-with-astroJS-using-mdx-ntegration.jpg'
+thumbnail: '/covers/build-a-blog-with-astroJS-using-mdx-integration.jpg'
 type: [ 'Post' ] 
 slug: 'build-a-blog-with-astroJS-using-mdx-ntegration'
 tags: [ 'MDX' ,'Astro.js', 'WYSIWYG editors' ]
